@@ -1,0 +1,33 @@
+{% extends "base.html" %} {% block title %}Activity{% endblock %}
+
+{% block content %}
+<br />
+<h1 align="center">Completed Sessions</h1>
+<br />
+<table class="table table-striped table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Activity</th>
+      <th scope="col">Duration</th>
+      <th scope="col">Note</th>
+      <th scope="col">Added</th>
+        <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for note in user.notes %}
+    <tr>
+      <th scope="row">{{note.activity}}</th>
+      <td>{{note.time}}</td>
+      <td>{{note.data}}</td>
+      <td>{{note.date}}</td>
+        <td>
+            <button type="button" class="close" onclick="deleteNote({{ note.id }})">
+                <span aria-hidden="true">&times</span>
+            </button>
+        </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
