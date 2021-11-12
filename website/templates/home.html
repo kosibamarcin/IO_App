@@ -4,11 +4,16 @@
 <form method="POST">
     <br />
     <h1 align="center">Add New Session</h1>
-         Activity<br>
-        <input type = "text" name = "activity" /></br>
+        <div class="form-group">
+            <label for="activity">Select type of activity</label>
+            <select class="form-control" name = "activity" id="activity">
+                <option>Ice Bath</option>
+                <option>Cold lake</option>
+            </select>
+        </div>
 
-         Time<br>
-         <input type="text" name="time" /><br>
+        Duration(minutes)<br>
+        <input type="number" step=0.1 name="time" min="0" max="300"/><br>
 
          Notes<br>
          <input type = "text" name = "note" class="form-control /><br>

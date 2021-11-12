@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block title %}Statistics{% endblock %}
+
+{% block content %}
+<br />
+<h2 align="center">Here are some stats about your progress</h2>
+<br />
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+{{divv|safe}}
+{{divvv|safe}}
+{% endblock %}

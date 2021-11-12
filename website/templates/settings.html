@@ -4,5 +4,21 @@
 <br />
 <h1 align="center">Settings</h1>
 <br />
-<h3>Here settings will be available.</h3>
+<h3>Information about You</h3>
+<h5>Your username: {{user.first_name}}</h5>
+<h5>Your email: {{user.email}}</h5>
+<br />
+<form method="POST">
+    <h3>Change information about You:</h3>
+    <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter first name"/>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter first name"/>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 {% endblock %}

@@ -28,9 +28,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbar">
             <div class="navbar-nav">
-                {% if user.is_authenticated %}
+                {% if user.is_authenticated or user.is_anonymous%}
                 <a class="nav-item nav-link" id="home" href="/">Home</a>
                 <a class="nav-item nav-link" id="activity" href="/activity">Activity</a>
+                <a class="nav-item nav-link" id="statistics" href="/statistics">Statistics</a>
                 <a class="nav-item nav-link" id="ranking" href="/ranking">Ranking</a>
                 <a class="nav-item nav-link" id="settings" href="/settings">Settings</a>
                 <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
