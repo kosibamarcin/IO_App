@@ -114,3 +114,12 @@ def settings():
 @views.route('/ranking')
 def ranking():
     return render_template("ranking.html", userss=User.query, user=current_user)
+
+
+@views.route('/maps')
+def maps():
+    return render_template("maps.html", user=current_user)
+
+@views.route('/weather')
+def weather():
+    return render_template("weather.html", user=current_user)
