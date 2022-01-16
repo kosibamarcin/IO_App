@@ -26,5 +26,7 @@ Narazie nie zostały zapewnione testy automatyczne.
 
 ## Twórcy
 Marcin Kosiba
+
 Andrzej Midura 
+
 Piotr Pyrczak
