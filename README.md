@@ -24,4 +24,7 @@ Dokumentacja aplikacji znajduje się w pliku Dokumentacja_IceMaster.pdf
 
 Narazie nie zostały zapewnione testy automatyczne.
 
-
+## Twórcy
+Marcin Kosiba
+Andrzej Midura 
+Piotr Pyrczak
