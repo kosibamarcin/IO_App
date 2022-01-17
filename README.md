@@ -5,8 +5,28 @@ Pomimo, iż nasza aplikacja wymaga dalszego doskonalenia to już teraz można si
 
 ## Uruchomienie
 
-Wkrótce się pojawi...
+Wymagania:
+  1. Python - preferowana wersja 3.9
+  2. PIP
 
+Należy w konsoli wykonać następujące instrukcje:
+
+```bash
+pip install flask-login
+pip install sqlalchemy
+pip install -U Werkzeug
+pip install Flask
+pip install plotly==5.5.0 
+pip install numpy
+pip install pandas
+```
+a następnie użyć polecenia:
+
+```bash
+python main.py
+```
+
+Aplikacja uruchomi się wtedy na localhost.
 ## Jakość kodu źródłowego
 
 Błedy i inne cechy kodu znajdują się w zakładce Security.
