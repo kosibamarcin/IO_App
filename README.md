@@ -27,9 +27,12 @@ python main.py
 ```
 
 Aplikacja uruchomi się wtedy na localhost.
+
 ## Jakość kodu źródłowego
 
-Błedy i inne cechy kodu znajdują się w zakładce Security.
+Nasz kod poddaliśmy statycznej analizie kodu w SonarQube.
+
+Wyniki znajdują się w katalogu sonar-qube.
 
 ## Licencja
 
