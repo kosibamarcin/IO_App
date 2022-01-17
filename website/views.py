@@ -1,10 +1,11 @@
 from flask import Blueprint, render_template, request, flash, jsonify
 from flask_login import login_required, current_user
+from werkzeug.security import generate_password_hash
+
 from .models import Note
 from .models import User
 from . import db
 import json
-import matplotlib.pyplot as plt
 import numpy as np
 import datetime
 import pandas as pd
@@ -100,6 +101,8 @@ def settings():
     if request.method == 'POST':
         firstname = request.form.get('firstname')
         email = request.form.get('email')
+        password1 = request.form.get('password1')
+        password2 = request.form.get('password2')
         if firstname != "":
             user = User.query.filter_by(id=current_user.id).first()
             user.first_name = firstname
@@ -108,6 +111,13 @@ def settings():
             user = User.query.filter_by(id=current_user.id).first()
             user.email = email
             db.session.commit()
+        if password1 != "" and password2 != "":
+            if password1 != password2:
+                flash('Passwords don\'t match.', category='error')
+            else:
+                user = User.query.filter_by(id=current_user.id).first()
+                user.password = generate_password_hash(password1, method='sha256')
+                db.session.commit()
     return render_template("settings.html", user=current_user)
 
 
